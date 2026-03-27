@@ -31,8 +31,20 @@
   </div>
   <div class="nav-right">
     <a href="#request" class="btn btn-gold" style="padding:10px 22px;font-size:13px;">Book a Call</a>
+    <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- Mobile menu drawer -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#how" class="mobile-link">How it works</a>
+  <a href="#kit" class="mobile-link">What you get</a>
+  <a href="#pilot" class="mobile-link">The offer</a>
+  <a href="#faq" class="mobile-link">FAQ</a>
+  <a href="#request" class="mobile-link mobile-link-cta">Book a Call →</a>
+</div>
 
 
 <!-- =========================================================
@@ -553,6 +565,27 @@
     &copy; <script>document.write(new Date().getFullYear())</script> All rights reserved.
   </div>
 </footer>
+
+
+<!-- =========================================================
+     MOBILE MENU
+     ========================================================= -->
+<script>
+(function () {
+  var toggle = document.getElementById('nav-toggle');
+  var menu   = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', function () {
+    toggle.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('.mobile-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      toggle.classList.remove('open');
+      menu.classList.remove('open');
+    });
+  });
+})();
+</script>
 
 
 <!-- =========================================================
