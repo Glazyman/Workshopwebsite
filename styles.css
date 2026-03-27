@@ -201,63 +201,6 @@ body {
 
 .nav-right { display: flex; align-items: center; gap: 10px; }
 
-/* Hamburger */
-.nav-hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 36px; height: 36px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  border-radius: 6px;
-}
-.nav-hamburger span {
-  display: block;
-  width: 22px; height: 2px;
-  background: var(--w70);
-  border-radius: 2px;
-  transition: transform .2s, opacity .2s;
-}
-.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-hamburger.open span:nth-child(2) { opacity: 0; }
-.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* Mobile drawer */
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  background: var(--bg-2);
-  border-bottom: 1px solid var(--bd-dk);
-  padding: 8px 0 16px;
-  position: sticky;
-  top: 58px;
-  z-index: 99;
-}
-.mobile-menu.open { display: flex; }
-.mobile-link {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--w70);
-  text-decoration: none;
-  padding: 13px 22px;
-  border-bottom: 1px solid var(--bd-dk);
-  transition: color .15s, background .15s;
-}
-.mobile-link:last-child { border-bottom: none; }
-.mobile-link:hover { color: var(--white); background: var(--w08); }
-.mobile-link-cta { color: var(--gold); font-weight: 700; }
-
-@media (min-width: 641px) {
-  .mobile-menu { display: none !important; }
-  .nav-hamburger { display: none !important; }
-}
-@media (max-width: 640px) {
-  .nav-hamburger { display: flex; }
-}
-
 /* ============================================================
    HERO — centered, screenshot-inspired
    ============================================================ */
@@ -830,114 +773,30 @@ footer { background: #040b16; border-top: 1px solid var(--bd-dk); padding: 36px 
 footer strong { color: rgba(255,255,255,.55); }
 
 /* ============================================================
-   RESPONSIVE — TABLET (≤960px)
+   RESPONSIVE
    ============================================================ */
 @media (max-width: 960px) {
-  /* Hero */
-  .hero { padding: 64px 0 56px; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
   .hero-stat:nth-child(2) { border-right: none; }
   .hero-stat { border-bottom: 1px solid var(--bd-dk); padding-bottom: 24px; }
   .hero-stat:nth-child(3), .hero-stat:nth-child(4) { border-bottom: none; }
-
-  /* Problem */
   .problem-header { grid-template-columns: 1fr; gap: 14px; }
   .pain-grid { grid-template-columns: repeat(2, 1fr); }
-
-  /* How it works */
-  .how { padding: 72px 0; }
-
-  /* Custom build */
-  .cb-grid { grid-template-columns: 1fr 1fr; }
-
-  /* Kit */
-  .kit-grid { grid-template-columns: 1fr 1fr; }
-
-  /* Room */
+  .cb-grid { grid-template-columns: 1fr; }
   .room-inner { grid-template-columns: 1fr; gap: 48px; }
-
-  /* Pilot */
-  .terms-row { gap: 12px; }
-
-  /* Checklist */
-  .cl-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-
-  /* Form */
-  .form-layout { grid-template-columns: 1fr; gap: 40px; }
+  .form-layout { grid-template-columns: 1fr; gap: 48px; }
+  .cl-grid { grid-template-columns: 1fr; gap: 36px; }
 }
 
-/* ============================================================
-   RESPONSIVE — MOBILE (≤640px)
-   ============================================================ */
 @media (max-width: 640px) {
-  /* Global */
-  .container { padding: 0 18px; }
-
-  /* Nav */
-  .nav { padding: 0 18px; height: 58px; }
+  .container { padding: 0 20px; }
+  .nav { padding: 0 20px; }
   .nav-links { display: none; }
-  .nav-logo-text { display: none; }
-  .nav-logo-img { height: 34px; width: 34px; }
-
-  /* Hero */
-  .hero { padding: 48px 0 40px; }
-  .hero h1 { font-size: clamp(34px, 9vw, 52px); letter-spacing: -.02em; }
-  .hero-sub { font-size: 16px; margin-bottom: 28px; }
-  .hero-cta { flex-direction: column; align-items: center; gap: 10px; }
-  .hero-cta .btn { width: 100%; justify-content: center; }
-  .hero-trust { gap: 14px; flex-direction: column; align-items: flex-start; padding: 0 4px; }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); margin-top: 40px; }
-  .hero-stat-num { font-size: 32px; }
-  .hero-stat { padding: 0 12px; border-bottom: 1px solid var(--bd-dk); padding-bottom: 20px; }
-  .hero-stat:nth-child(3), .hero-stat:nth-child(4) { border-bottom: none; }
-  .hero-stat:nth-child(2) { border-right: none; }
-
-  /* Problem */
-  .problem { padding: 56px 0; }
   .pain-grid { grid-template-columns: 1fr; }
-
-  /* How it works */
-  .how { padding: 56px 0; }
-  .how-header { margin-bottom: 40px; }
-  .step { grid-template-columns: 54px 1fr; gap: 14px; padding-bottom: 40px; }
-  .steps::before { left: 26px; }
-  .step-circle { width: 54px; height: 54px; }
-  .step-body h3 { font-size: 20px; }
-
-  /* Custom build */
-  .custom-build { padding: 56px 0; }
-  .cb-grid { grid-template-columns: 1fr; }
-
-  /* Kit */
-  .kit { padding: 56px 0; }
-  .kit-grid { grid-template-columns: 1fr; }
-
-  /* Room */
-  .room { padding: 56px 0; }
-  .room-stat { flex-direction: column; gap: 8px; padding: 20px; }
-  .room-stat-num { font-size: 36px; min-width: auto; }
-
-  /* Pilot */
-  .pilot { padding: 56px 0; }
-  .pilot-headline { font-size: clamp(26px, 7vw, 42px); }
-  .terms-row { flex-direction: column; gap: 12px; }
-  .term-box { max-width: 100%; flex: none; padding: 22px 24px; }
-
-  /* Checklist */
-  .checklist-section { padding: 56px 0; }
-  .cl-grid { grid-template-columns: 1fr; gap: 32px; }
-
-  /* FAQ */
-  .faq { padding: 56px 0; }
-  details summary { font-size: 14.5px; }
-
-  /* Form */
-  .form-section { padding: 56px 0; }
-  .form-layout { grid-template-columns: 1fr; gap: 36px; }
-  .form-card { padding: 28px 20px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
   .field-row { grid-template-columns: 1fr; }
-  .schedule-btn { font-size: 15px; padding: 16px 20px; }
-
-  /* Footer */
-  footer { padding: 28px 18px; font-size: 12px; }
+  .step { grid-template-columns: 54px 1fr; gap: 16px; }
+  .steps::before { left: 26px; }
+  .term-box { max-width: 100%; }
+  .form-card { padding: 32px 22px; }
 }
