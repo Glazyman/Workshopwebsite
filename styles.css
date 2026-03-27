@@ -250,6 +250,10 @@ body {
 .mobile-link:hover { color: var(--white); background: var(--w08); }
 .mobile-link-cta { color: var(--gold); font-weight: 700; }
 
+@media (min-width: 641px) {
+  .mobile-menu { display: none !important; }
+  .nav-hamburger { display: none !important; }
+}
 @media (max-width: 640px) {
   .nav-hamburger { display: flex; }
 }
