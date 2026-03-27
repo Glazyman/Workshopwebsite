@@ -783,6 +783,7 @@ footer strong { color: rgba(255,255,255,.55); }
   .problem-header { grid-template-columns: 1fr; gap: 14px; }
   .pain-grid { grid-template-columns: repeat(2, 1fr); }
   .cb-grid { grid-template-columns: 1fr; }
+  .kit-grid { grid-template-columns: 1fr; }
   .room-inner { grid-template-columns: 1fr; gap: 48px; }
   .form-layout { grid-template-columns: 1fr; gap: 48px; }
   .cl-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -794,6 +795,8 @@ footer strong { color: rgba(255,255,255,.55); }
   .nav-links { display: none; }
   .pain-grid { grid-template-columns: 1fr; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .kit-grid { grid-template-columns: 1fr; }
+  .kit-card { padding: 24px 20px; }
   .field-row { grid-template-columns: 1fr; }
   .step { grid-template-columns: 54px 1fr; gap: 16px; }
   .steps::before { left: 26px; }
